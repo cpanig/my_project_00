@@ -1,36 +1,33 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <div>
-      <p>
-        If Element is successfully added to this project, you'll see an
-        <code v-text="'<el-button>'"></code>
-        below
-      </p>
-      <el-button>el-button</el-button>
+    <!-- 名称 -->
+  <div class="project-title">
+   <h1 class="text-center">隧道工程人员管理系统</h1>
+   </div>
+   <!-- 主菜单组件 -->
+   <router-view></router-view>
     </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'app',
   components: {
-    HelloWorld
+
   }
+
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped="scoped">
+  .project-title{
+    margin-bottom: 80px;
+  }
+  .project-title > h1{
+    margin-top: 20px;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    color: white;
+    text-shadow: 1px 2px 4px #eee;
+  }
 </style>
