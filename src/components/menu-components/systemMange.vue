@@ -3,11 +3,11 @@
     <!-- 顶部菜单-->
     <navbar></navbar>
     <!-- 主页面-->
-    <div class="main-container d-flex justify-content-around">
+    <div class="main-container row d-flex justify-content-center">
       <!-- 左边菜单 -->
-     <mangeBar></mangeBar>
+     <mangeBar class="col-md-2"></mangeBar>
      <!-- 右边表单  -->
-     <router-view></router-view>
+     <router-view class="col-md-9"></router-view>
   </div>
  </div>
 </template>

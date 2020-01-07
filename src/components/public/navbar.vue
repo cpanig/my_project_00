@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- 顶部菜单容器 -->
-  <div class="header  d-flex align-items-end justify-content-between">
+  <div class="header  d-flex align-items-end justify-content-between row">
     <!-- 左边logo -->
-    <div class="align-self-center">
+    <div class="align-self-center justify-content-sm-center">
       <h1 class="logo">隧道工程人员管理系统</h1>
     </div>
     <!-- 右边导航 -->
