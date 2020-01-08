@@ -1,11 +1,11 @@
 <template>
-<div class="main-right mt-5 row">
+<div class="main-right mt-5">
      <ul class="nav nav-tabs col-sm-12" id="myTab" role="tablist">
        <li class="nav-item">
          <a class="nav-link active" id="ChangePsw-tab" data-toggle="tab" href="#ChangePsw-inner" role="tab" aria-controls="home" aria-selected="true">修改密码</a>
        </li>
      </ul>
-     <div class="tab-content " id="myTabContent">
+     <div class="tab-content" id="myTabContent">
        <div class="tab-pane fade show active" id="ChangePsw-inner" role="tabpanel" aria-labelledby="home-tab">
          <form class="mt-4 ml-3 row">
            <div class="form-group col-sm-12 d-flex">

@@ -4,17 +4,16 @@
     <navbar></navbar>
     <!-- 主页面-->
     <div class="main-container row d-flex justify-content-center">
-      <!-- 左边菜单 -->
-     <mangeBar class="col-md-2"></mangeBar>
-     <!-- 右边表单  -->
-     <router-view class="col-md-9"></router-view>
+    <!-- 左边菜单 -->
+    <mangeBar class="col-md-2"></mangeBar>
+    <!-- 右边菜单 -->
+    <router-view class="col-md-9"></router-view>
   </div>
  </div>
 </template>
-
 <script>
-import navbar from '../public/navbar.vue'
-import mangeBar from '../public/systemMangebar.vue'
+import navbar from '../../public/navbar.vue'
+import mangeBar from './Attendance_Manage_navbar.vue'
 export default {
   components: {
     navbar: navbar,
@@ -22,6 +21,5 @@ export default {
   }
 }
 </script>
-
 <style>
 </style>

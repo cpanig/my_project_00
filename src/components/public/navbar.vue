@@ -8,32 +8,32 @@
     </div>
     <!-- 右边导航 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
-      <a class="navbar-brand" href="#">首页</a>
+      <router-link class="navbar-brand" to="/">首页</router-link>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">系统管理 <span class="sr-only">(current)</span></a>
+            <router-link class="nav-link" to="/systemMange">系统管理 <span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">综合管理</a>
+            <router-link class="nav-link" to="/Integrated_Manage">综合管理</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">用户管理</a>
+            <router-link class="nav-link" to="/User_Manage">用户管理</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">员工管理</a>
+            <router-link class="nav-link" to="/Staff_Manage">员工管理</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">人员追踪</a>
+            <router-link class="nav-link" to="/Staff_Tracking">人员追踪</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">查询统计</a>
+            <router-link class="nav-link" to="/Query_Statistic">查询统计</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">考勤管理</a>
+           <router-link class="nav-link" to="/Attendance_Manage">考勤管理</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">系统帮助</a>
+            <router-link class="nav-link" to="/System_Help">系统帮助</router-link>
           </li>
         </ul>
       </div>

@@ -2,7 +2,7 @@
   <div class="main-right mt-5">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="LogoutLogin-tab" data-toggle="tab" href="#ChangePsw-inner" role="tab" aria-controls="home" aria-selected="true">修改密码</a>
+        <a class="nav-link active" id="LogoutLogin-tab" data-toggle="tab" href="#ChangePsw-inner" role="tab" aria-controls="home" aria-selected="true">注销登陆</a>
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
