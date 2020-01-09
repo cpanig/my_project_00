@@ -2,7 +2,7 @@
 <div class="main-right mt-5">
   <ul class="nav nav-tabs col-sm-12" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="Tracking-tab" data-toggle="tab" href="#Tracking-inner" role="tab" aria-controls="dmg" aria-selected="true">员工选择追踪</a>
+      <a class="nav-link active" id="Tracking-tab" data-toggle="tab" href="#Tracking-inner" role="tab" aria-controls="dmg" aria-selected="true">员工实时追踪</a>
     </li>
   </ul>
   <div class="tab-content " id="myTabContent">
@@ -12,11 +12,14 @@
           <thead>
             <tr>
               <th scope="col">序号</th>
-              <th scope="col">示意图名称</th>
-              <th scope="col">上传时间</th>
-              <th scope="col">上传人</th>
-              <th scope="col">描述</th>
-              <th scope="col">选择</th>
+              <th scope="col">编号</th>
+              <th scope="col">卡号</th>
+              <th scope="col">姓名</th>
+              <th scope="col">部门</th>
+              <th scope="col">当前位置</th>
+              <th scope="col">到达时间</th>
+              <th scope="col">来源地</th>
+              <th scope="col">下井时间</th>
             </tr>
           </thead>
             <tbody>
@@ -26,6 +29,9 @@
                 <td>Otto</td>
                 <td>@mdo</td>
                 <td>@mdo</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
                  <td></td>
               </tr>
             </tbody>

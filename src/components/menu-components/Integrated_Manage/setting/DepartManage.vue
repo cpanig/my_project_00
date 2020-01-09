@@ -46,13 +46,13 @@
       <div class="tab-pane fade show" id="New-tab-inner" role="tabpane2" aria-labelledby="dmg-tab">
         <form class="mt-4 ml-3 row">
           <div class="form-group col-sm-12 row ">
-            <label for="oldPwd" class="col-form-label col-sm-2">部门名称</label>
+            <label for="oldPwd" class="col-form-label col-sm-2">部门名称：</label>
             <div class="col-sm-9 ml-5">
               <input  class="form-control" id="oldPwd" placeholder="必填">
             </div>
           </div>
           <div class="form-group col-sm-12 row">
-            <label for="oldPwd" class="col-form-label col-sm-2">部门编号</label>
+            <label for="oldPwd" class="col-form-label col-sm-2">部门编号：</label>
             <div class="col-sm-9 ml-5">
               <input  class="form-control" id="oldPwd">
             </div>
@@ -78,8 +78,8 @@
             </div>
             <div class="row col-sm-12">
               <div class="col-sm-2 ml-5"></div>
-              <div class="col-sm-9 mt-2 ml-1">
-                <span class="border border-white border-1">计算说明：以实际工作时间除以工时进行计算，例如：某工时为4小时/工的员工工作11小时后，计工数理为11/2=2工</span>
+              <div class="col-sm-9 mt-2 ml-4 border border-white border-1">
+                <span>计算说明：以实际工作时间除以工时进行计算，例如：某工时为4小时/工的员工工作11小时后，计工数理为11/2=2工</span>
               </div>
             </div>
           </div>
@@ -110,22 +110,20 @@
               </select>
             </div>
           </div>
-          <div class="form-check row  col-sm-12 d-flex align-items-center">
-            <div class="col-sm-3 offset-3">
-            <input class="form-check-input" type="checkbox" id="Check1">
-            <label class="form-check-label" for="Check2">
-               位于前面（不选位于其后）
-            </label>
-            </div>
+          <div class="col-sm-12 row">
+           <div class="col-sm-2 mr-5"></div>
+            <div class="col-sm-4 ml-4">
+           <input class="form-check-input" type="checkbox" id="Check1">
+           <label class="form-check-label" for="Check2">
+              位于前面（不选位于其后）
+           </label>
+           </div>
           </div>
           <div class="d-flex col-sm-12 justify-content-center">
             <a href="#New-tab-inner" class="btn btn-primary">新建</a>
           </div>
         </form>
         </div>
-      <!-- 修改 -->
-      <!-- 修改 -->
-      <!-- 修改 -->
       <!-- 修改 -->
       <div class="tab-pane fade show" id="Change-inner" role="tabpane3" aria-labelledby="dmg-tab">
         <form class="mt-4 ml-3 row">
@@ -236,13 +234,14 @@
               </select>
             </div>
           </div>
-          <div class="form-check row  col-sm-12 d-flex align-items-center">
-            <div class="col-sm-3 offset-3">
-            <input class="form-check-input" type="checkbox" id="Check1">
-            <label class="form-check-label" for="Check2">
-               位于前面（不选位于其后）
-            </label>
-            </div>
+          <div class="col-sm-12 row">
+           <div class="col-sm-2 mr-5"></div>
+            <div class="col-sm-4 ml-4">
+           <input class="form-check-input" type="checkbox" id="Check1">
+           <label class="form-check-label" for="Check2">
+              位于前面（不选位于其后）
+           </label>
+           </div>
           </div>
           <div class="d-flex col-sm-12 justify-content-center">
             <a href="#New-tab-inner" class="btn btn-primary">新建</a>

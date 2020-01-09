@@ -1,12 +1,14 @@
 <template>
 <div class="main-right mt-5">
+    <!--  顶部菜单   -->
      <ul class="nav nav-tabs col-sm-12" id="myTab" role="tablist">
        <li class="nav-item">
-         <a class="nav-link active" id="Adduser-tab" data-toggle="tab" href="#Adduser-inner" role="tab" aria-controls="home" aria-selected="true">新建用户</a>
+         <a class="nav-link active" id="Changeuser-tab" data-toggle="tab" href="#Changeuser-inner" role="tab" aria-controls="home" aria-selected="true">修改用户</a>
        </li>
      </ul>
+     <!-- 底部列表组 -->
      <div class="tab-content" id="myTabContent">
-       <div class="tab-pane fade show active" id="Adduser-inner" role="tabpanel" aria-labelledby="home-tab">
+       <div class="tab-pane fade show active" id="Changeuser-inner" role="tabpanel" aria-labelledby="home-tab">
          <form class="mt-4  row">
            <div class="form-group col-sm-12 row">
              <label for="oldPwd" class="col-form-label col-sm-12">用户名：</label>

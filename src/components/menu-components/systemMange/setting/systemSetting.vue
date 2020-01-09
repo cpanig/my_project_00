@@ -1,5 +1,6 @@
 <template>
   <div class="main-right mt-5">
+    <!-- 顶部菜单 -->
      <ul class="nav nav-tabs" id="myTab" role="tablist">
        <li class="nav-item">
          <a class="nav-link active" id="setting-tab" data-toggle="tab" href="#setting-tab-inner" role="tab" aria-controls="home" aria-selected="true">基本设置</a>
@@ -14,6 +15,7 @@
          <a class="nav-link" id="system-tab" data-toggle="tab" href="#system-tab-inner" role="tab" aria-controls="system" aria-selected="false">系统设置</a>
        </li>
      </ul>
+     <!-- 底部列表组 -->
      <div class="tab-content" id="myTabContent">
        <!-- 表单-基本设置  -->
        <div class="tab-pane fade show active" id="setting-tab-inner" role="tabpanel" aria-labelledby="home-tab">

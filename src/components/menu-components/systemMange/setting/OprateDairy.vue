@@ -7,34 +7,39 @@
     </ul>
     <div class="tab-content " id="myTabContent">
       <div class="tab-pane fade show active" id="ChangePsw-inner" role="tabpanel" aria-labelledby="home-tab">
-        <form class="mt-4 ml-5">
-          <div class="form-group row">
+        <form class="mt-4">
+          <div class="form-group row col-sm-12">
             <label for="input19" class="col-form-label col-sm-1">操作类别：</label>
             <div class="col-sm-4">
-              <input type="email" class="form-control" id="input19">
+              <select class="custom-select">
+                <option selected>----全部----</option>
+                <option value="1">……</option>
+              </select>
             </div>
             <label for="input20" class="col-form-label col-sm-1">操作等级：</label>
-            <select class="custom-select col-sm-4 ml-3">
-              <option selected>----全部----</option>
-              <option value="1">……</option>
-            </select>
+              <div class="col-sm-4">
+                <select class="custom-select">
+                  <option selected>----全部----</option>
+                  <option value="1">……</option>
+                </select>
+              </div>
           </div>
-          <div class="form-group row">
+            <div class="form-group row col-sm-12">
+              <label for="input19" class="col-form-label col-sm-1 ">被操作员工：</label>
+              <div class="col-sm-4">
+                <input type="email" class="form-control" id="input19">
+              </div>
+              <label for="input20" class="col-form-label col-sm-1">操作员名：</label>
+              <div class="col-sm-4">
+                <input type="email" class="form-control" id="input19">
+              </div>
+            </div>
+          <div class="form-group row col-sm-12">
             <label for="input19" class="col-form-label col-sm-1">被操作员工</label>
             <div class="col-sm-4">
               <input type="email" class="form-control" id="input19">
             </div>
-            <label for="input20" class="col-form-label col-sm-1">操作员名</label>
-            <div class="col-sm-4">
-              <input type="email" class="form-control" id="input20">
-            </div>
-          </div>
-          <div class="form-group row d-flex align-items-center">
-            <label for="input19" class="col-form-label col-sm-1">被操作员工</label>
-            <div class="col-sm-4">
-              <input type="email" class="form-control" id="input19">
-            </div>
-            <div class="custom-control custom-checkbox">
+            <div class="custom-control custom-checkbox mt-2">
               <input type="checkbox" class="custom-control-input" id="customCheck1">
               <label class="custom-control-label" for="customCheck1">以月查询</label>
             </div>

@@ -1,7 +1,11 @@
 <template>
   <div>
-    <!-- 顶部菜单容器 -->
-  <div class="header  d-flex align-items-end justify-content-between row">
+  <!-- 标题  -->
+  <div class="project-title" v-if="title">
+  <h1 class="text-center">隧道工程人员管理系统</h1>
+  </div>
+  <!-- 顶部菜单容器 -->
+  <div class="header  d-flex align-items-end justify-content-between row" v-else>
     <!-- 左边logo -->
     <div class="align-self-center justify-content-sm-center">
       <h1 class="logo">隧道工程人员管理系统</h1>
@@ -43,9 +47,33 @@
 </template>
 
 <script>
+/* 此处引入enventBus，接受home组件传来的值 */
+export default {
+  data () {
+    return {
+      title: true,
+      nav: false
+    }
+  },
+  methods: {
+  }
+}
 </script>
 
 <style>
+  /* 标题*/
+  .project-title{
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .project-title > h1{
+    margin-top: 20px;
+    font-size: 3.5rem;
+    letter-spacing: 10px;
+    color: white;
+    text-shadow: 1px 2px 4px #eee;
+  }
+  /* 顶部导航 */
   .header{
     height: 100px;
     background-color: #426FAA;

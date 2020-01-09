@@ -1,12 +1,9 @@
 <template>
-  <!-- 名称 -->
   <div>
-  <div class="project-title">
-   <h1 class="text-center">隧道工程人员管理系统</h1>
-   </div>
+  <!-- 主菜单  -->
   <div class="menu-container">
     <ul class="menu  d-flex justify-content-around">
-      <li class="menu-link"><router-link to="/systemMange" class="link">系统管理</router-link></li>
+      <li @click.capture="changeFlag"><router-link to="/systemMange" class="link">系统管理</router-link></li>
       <li><router-link to="/Integrated_Manage" class="link">综合管理</router-link></li>
       <li><router-link to="/User_Manage" class="link">用户管理</router-link></li>
     </ul>
@@ -20,46 +17,43 @@
       <li>GIS界面</li>
       <li><router-link to="/System_Help" class="link">系统帮助</router-link></li>
     </ul>
-    <transition name="slide-fade">
-    <router-view></router-view>
-    </transition>
   </div>
  </div>
 </template>
 
 <script>
+export default {
+  data () {
+    return {
+      flag: true
+    }
+  },
+  methods: {
+  },
+  components: {
+  }
+}
 </script>
 
 <style>
   body{
     background-color: #162849 !important;
   }
-  /* 标题*/
-  .project-title{
-    margin-bottom: 80px;
-  }
-  .project-title > h1{
-    margin-top: 20px;
-    font-size: 2.5rem;
-    letter-spacing: 10px;
-    color: white;
-    text-shadow: 1px 2px 4px #eee;
-  }
   /* 菜单*/
   .menu{
     list-style: none;
-    padding: 0 30%;
+    padding: 10px 25%;
   }
   .menu > li{
-    width: 7rem;
-    height: 7rem;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
     background-image:#162849 ;
-    box-shadow:0 0 7px 7px #10539A inset;
+    box-shadow:0 0 15px 8px #10539A inset;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-align: center;
-    line-height: 110px;
+    line-height: 140px;
   }
   .menu-link:hover{
     animation: faden 1s 1;
