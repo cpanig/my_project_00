@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+/* 主菜单界面 */
 import home from '../components/home.vue'
+import menus from '../menu.vue'
 /* 系统管理 */
 import systemMange from '../components/menu-components/systemMange/systemMange.vue'
 import sysSeting from '../components/menu-components/systemMange/setting/systemSetting.vue'
@@ -56,99 +58,106 @@ import ContactUs from '../components/menu-components/System_Help/setting/Contact
 Vue.use(VueRouter)
 const router = new VueRouter({
   routes: [
-    { path: '/', redirect: '/home' },
-    { path: '/home', component: home },
-    /* 系统管理 */
-    { path: '/systemMange',
-      component: systemMange,
+    { path: '/', redirect: '/menus' },
+    { path: '/menus', component: menus },
+    /* 主菜单界面 */
+    { path: '/home', redirect: '/home/systemMange' },
+    { path: '/home',
+      component: home,
       children:
-     [ { path: '/systemMange', redirect: '/systemSeting' },
-       { path: '/systemSeting', component: sysSeting },
-       { path: '/ChangePsw', component: ChangePsw },
-       { path: '/LogoutLogin', component: LogoutLogin },
-       { path: '/WorkAreaLocation', component: WorkAreaLocation },
-       { path: '/StationPosition', component: StationPosition },
-       { path: '/OprateDairy', component: OprateDairy },
-       { path: '/SketchSelet', component: SketchSelet }
-     ] },
-    /* 综合管理  */
-    { path: '/Integrated_Manage',
-      component: IntegratedManage,
-      children:
-      [ { path: '/Integrated_Manage', redirect: '/DepartManage' },
-        { path: '/DepartManage', component: DepartManage },
-        { path: '/PostsManage', component: PostsManage },
-        { path: '/TitleManage', component: TitleManage },
-        { path: '/WorkType', component: WorkType },
-        { path: '/ScheduleSet', component: ScheduleSet },
-        { path: '/WorkFace', component: WorkFace },
-        { path: '/ContingencyPlan', component: ContingencyPlan },
-        { path: '/Substation', component: Substation }
-      ]
-    },
-    /* 用户管理 */
-    { path: '/User_Manage',
-      component: UserManage,
-      children:
-      [ { path: '/User_Manage', redirect: '/AddUser' },
-        { path: '/AddUser', component: AddUser },
-        { path: '/ChangeUserInfo', component: ChangeUserInfo },
-        { path: '/DeleteUser', component: DeleteUser },
-        { path: '/SearchUser', component: SearchUser }
-      ]
-    },
-    /* 员工管理 */
-    { path: '/Staff_Manage',
-      component: StaffManage,
-      children:
-      [ { path: '/Staff_Manage', redirect: '/StaffSelect' },
-        { path: '/StaffSelect', component: StaffSelect },
-        { path: '/StaffAdd', component: StaffAdd },
-        { path: '/StaffEdit', component: StaffEdit },
-        { path: '/StaffDelete', component: StaffDelete },
-        { path: '/TagManage', component: TagManage }
-      ]
-    },
-    /* 人员追踪 */
-    { path: '/Staff_Tracking',
-      component: StaffTracking,
-      children:
-      [ { path: '/Staff_Tracking', redirect: '/SelectTrack' },
-        { path: '/SelectTrack', component: SelectTrack },
-        { path: '/RealtimeTrack', component: RealtimeTrack },
-        { path: '/PositionSearch', component: PositionSearch },
-        { path: '/ActivityTrack', component: ActivityTrack },
-        { path: '/TrackReappear', component: TrackReappear },
-        { path: '/PersonalPosition', component: PersonalPosition }
-      ]
-    },
-    /* 查询统计 */
-    { path: '/Query_Statistic',
-      component: QueryStatistic,
-      children:
-      [ { path: '/Query_Statistic', redirect: '/MineStaffQuery' },
-        { path: '/MineStaffQuery', component: MineStaffQuery }
-      ]
-    },
-    /* 考勤管理 */
-    { path: '/Attendance_Manage',
-      component: AttendanceManage,
-      children:
-      [ { path: '/Attendance_Manage', redirect: '/DepartDayQuery' },
-        { path: '/DepartDayQuery', component: DepartDayQuery }
-      ]
-    },
-    /* 系统帮助 */
-    { path: '/System_Help',
-      component: SystemHelp,
-      children:
-      [ { path: '/System_Help', redirect: '/Helps' },
-        { path: '/Helps', component: Helps },
-        { path: '/About', component: About },
-        { path: '/OnlineHelp', component: OnlineHelp },
-        { path: '/ContactUs', component: ContactUs }
-      ]
-    }
+     [
+       /* 系统管理 */
+       { path: '/home/systemMange',
+         component: systemMange,
+         children:
+        [ { path: '/home/systemMange', redirect: '/home/systemMange/systemSeting' },
+          { path: '/home/systemMange/systemSeting', component: sysSeting },
+          { path: '/home/systemMange/ChangePsw', component: ChangePsw },
+          { path: '/home/systemMange/LogoutLogin', component: LogoutLogin },
+          { path: '/home/systemMange/WorkAreaLocation', component: WorkAreaLocation },
+          { path: '/home/systemMange/StationPosition', component: StationPosition },
+          { path: '/home/systemMange/OprateDairy', component: OprateDairy },
+          { path: '/home/systemMange/SketchSelet', component: SketchSelet }
+        ] },
+       /* 综合管理  */
+       { path: '/home/Integrated_Manage',
+         component: IntegratedManage,
+         children:
+         [ { path: '/home/Integrated_Manage', redirect: '/home/Integrated_Manage/DepartManage' },
+           { path: '/home/Integrated_Manage/DepartManage', component: DepartManage },
+           { path: '/home/Integrated_Manage/PostsManage', component: PostsManage },
+           { path: '/home/Integrated_Manage/TitleManage', component: TitleManage },
+           { path: '/home/Integrated_Manage/WorkType', component: WorkType },
+           { path: '/home/Integrated_Manage/ScheduleSet', component: ScheduleSet },
+           { path: '/home/Integrated_Manage/WorkFace', component: WorkFace },
+           { path: '/home/Integrated_Manage/ContingencyPlan', component: ContingencyPlan },
+           { path: '/home/Integrated_Manage/Substation', component: Substation }
+         ]
+       },
+       /* 用户管理 */
+       { path: '/home/User_Manage',
+         component: UserManage,
+         children:
+         [ { path: '/home/User_Manage', redirect: '/home/User_Manage/AddUser' },
+           { path: '/home/User_Manage/AddUser', component: AddUser },
+           { path: '/home/User_Manage/ChangeUserInfo', component: ChangeUserInfo },
+           { path: '/home/User_Manage/DeleteUser', component: DeleteUser },
+           { path: '/home/User_Manage/SearchUser', component: SearchUser }
+         ]
+       },
+       /* 员工管理 */
+       { path: '/home/Staff_Manage',
+         component: StaffManage,
+         children:
+         [ { path: '/home/Staff_Manage', redirect: '/home/Staff_Manage/StaffSelect' },
+           { path: '/home/Staff_Manage/StaffSelect', component: StaffSelect },
+           { path: '/home/Staff_Manage/StaffAdd', component: StaffAdd },
+           { path: '/home/Staff_Manage/StaffEdit', component: StaffEdit },
+           { path: '/home/Staff_Manage/StaffDelete', component: StaffDelete },
+           { path: '/home/Staff_Manage/TagManage', component: TagManage }
+         ]
+       },
+       /* 人员追踪 */
+       { path: '/home/Staff_Tracking',
+         component: StaffTracking,
+         children:
+         [ { path: '/home/Staff_Tracking', redirect: '/home/Staff_Tracking/SelectTrack' },
+           { path: '/home/Staff_Tracking/SelectTrack', component: SelectTrack },
+           { path: '/home/Staff_Tracking/RealtimeTrack', component: RealtimeTrack },
+           { path: '/home/Staff_Tracking/PositionSearch', component: PositionSearch },
+           { path: '/home/Staff_Tracking/ActivityTrack', component: ActivityTrack },
+           { path: '/home/Staff_Tracking/TrackReappear', component: TrackReappear },
+           { path: '/home/Staff_Tracking/PersonalPosition', component: PersonalPosition }
+         ]
+       },
+       /* 查询统计 */
+       { path: '/home/Query_Statistic',
+         component: QueryStatistic,
+         children:
+         [ { path: '/home/Query_Statistic', redirect: '/home/Query_Statistic/MineStaffQuery' },
+           { path: '/home/Query_Statistic/MineStaffQuery', component: MineStaffQuery }
+         ]
+       },
+       /* 考勤管理 */
+       { path: '/home/Attendance_Manage',
+         component: AttendanceManage,
+         children:
+         [ { path: '/home/Attendance_Manage', redirect: '/home/Attendance_Manage/DepartDayQuery' },
+           { path: '/home/Attendance_Manage/DepartDayQuery', component: DepartDayQuery }
+         ]
+       },
+       /* 系统帮助 */
+       { path: '/home/System_Help',
+         component: SystemHelp,
+         children:
+         [ { path: '/home/System_Help', redirect: '/home/System_Help/Helps' },
+           { path: '/home/System_Help/Helps', component: Helps },
+           { path: '/home/System_Help/About', component: About },
+           { path: '/home/System_Help/OnlineHelp', component: OnlineHelp },
+           { path: '/home/System_Help/ContactUs', component: ContactUs }
+         ]
+       }
+     ] }
   ]
 })
 

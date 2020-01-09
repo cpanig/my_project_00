@@ -1,11 +1,7 @@
 <template>
   <div>
-  <!-- 标题  -->
-  <div class="project-title" v-if="title">
-  <h1 class="text-center">隧道工程人员管理系统</h1>
-  </div>
   <!-- 顶部菜单容器 -->
-  <div class="header  d-flex align-items-end justify-content-between row" v-else>
+  <div class="header  d-flex align-items-end justify-content-between row">
     <!-- 左边logo -->
     <div class="align-self-center justify-content-sm-center">
       <h1 class="logo">隧道工程人员管理系统</h1>
@@ -16,28 +12,28 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <router-link class="nav-link" to="/systemMange">系统管理 <span class="sr-only">(current)</span></router-link>
+            <router-link class="nav-link" to="/home/systemMange">系统管理 <span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/Integrated_Manage">综合管理</router-link>
+            <router-link class="nav-link" to="/home/Integrated_Manage">综合管理</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/User_Manage">用户管理</router-link>
+            <router-link class="nav-link" to="/home/User_Manage">用户管理</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/Staff_Manage">员工管理</router-link>
+            <router-link class="nav-link" to="/home/Staff_Manage">员工管理</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/Staff_Tracking">人员追踪</router-link>
+            <router-link class="nav-link" to="/home/Staff_Tracking">人员追踪</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/Query_Statistic">查询统计</router-link>
+            <router-link class="nav-link" to="/home/Query_Statistic">查询统计</router-link>
           </li>
           <li class="nav-item">
-           <router-link class="nav-link" to="/Attendance_Manage">考勤管理</router-link>
+           <router-link class="nav-link" to="/home/Attendance_Manage">考勤管理</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/System_Help">系统帮助</router-link>
+            <router-link class="nav-link" to="/home/System_Help">系统帮助</router-link>
           </li>
         </ul>
       </div>
@@ -47,7 +43,6 @@
 </template>
 
 <script>
-/* 此处引入enventBus，接受home组件传来的值 */
 export default {
   data () {
     return {
@@ -61,18 +56,6 @@ export default {
 </script>
 
 <style>
-  /* 标题*/
-  .project-title{
-    margin-top: 80px;
-    margin-bottom: 80px;
-  }
-  .project-title > h1{
-    margin-top: 20px;
-    font-size: 3.5rem;
-    letter-spacing: 10px;
-    color: white;
-    text-shadow: 1px 2px 4px #eee;
-  }
   /* 顶部导航 */
   .header{
     height: 100px;

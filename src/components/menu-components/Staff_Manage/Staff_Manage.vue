@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- 顶部菜单-->
-    <navbar></navbar>
     <!-- 主页面-->
     <div class="main-container row d-flex justify-content-center">
     <!-- 左边菜单 -->
@@ -14,11 +12,9 @@
  </div>
 </template>
 <script>
-import navbar from '../../public/navbar.vue'
 import mangeBar from './Staff_Manage_navbar.vue'
 export default {
   components: {
-    navbar: navbar,
     mangeBar: mangeBar
   }
 }

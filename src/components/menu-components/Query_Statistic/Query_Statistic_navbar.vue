@@ -2,7 +2,7 @@
   <div>
     <ul class="list-group">
        <li class="list-group-item active">查询统计</li>
-       <router-link to="" class="list-group-item list-group-item-action">井下员工查询</router-link>
+       <router-link to="/home/Query_Statistic/MineStaffQuery" class="list-group-item list-group-item-action">井下员工查询</router-link>
        <router-link to="" class="list-group-item list-group-item-action">矿井员工分布</router-link>
        <router-link to="" class="list-group-item list-group-item-action">井下人数统计</router-link>
        <router-link to="" class="list-group-item list-group-item-action">区域人数统计</router-link>
