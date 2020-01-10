@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- 主页面-->
+    <!-- 主页面容器 -->
     <div class="main-container row d-flex justify-content-center">
     <!-- 左边菜单 -->
     <mangeBar class="col-md-2"></mangeBar>
@@ -20,16 +20,4 @@ export default {
 }
 </script>
 <style>
-  .v-enter{
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  .v-leave-to{
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  .v-enter-active,
-  .v-leave-active{
-    transition: all 0.5s ease;
-  }
 </style>

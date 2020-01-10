@@ -1,4 +1,5 @@
 <template>
+  <!-- 操作日记管理-->
   <div class="main-right mt-5">
     <ul class="nav nav-tabs col-sm-12" id="myTab" role="tablist">
       <li class="nav-item">

@@ -39,7 +39,7 @@
     font-size: 3.5rem;
     letter-spacing: 10px;
     color: white;
-    text-shadow: 1px 2px 4px #eee;
+    text-shadow: 1px 4px 5px #eee;
   }
   /* 菜单*/
   .menu{
@@ -56,21 +56,15 @@
     font-size: 1.5rem;
     text-align: center;
     line-height: 140px;
-  }
-  .menu-link:hover{
-    animation: faden 1s 1;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
-    animation-name: faden;
     cursor: pointer;
   }
   .link{
+    padding: 65px 27px;
     text-decoration: none !important;
     color: white !important;
+  }
+  .menu > li:hover{
+    background-color: #1E4C77;
+    transition: background-color 0.5s ease;
   }
 </style>

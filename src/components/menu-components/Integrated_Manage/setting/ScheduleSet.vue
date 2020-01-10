@@ -1,5 +1,7 @@
 <template>
+<!-- 班次管理 -->
 <div class="main-right mt-5">
+  <!-- 顶部菜单 -->
   <ul class="nav nav-tabs col-sm-12" id="myTab" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="Ban-tab" data-toggle="tab" href="#Ban-inner" role="tab" aria-controls="dmg" aria-selected="true">班次设置</a>
@@ -8,6 +10,7 @@
       <a class="nav-link " id="List-tab" data-toggle="tab" href="#List-inner" role="tab" aria-controls="dmg" aria-selected="true">列出所有班次设置信息</a>
     </li>
   </ul>
+  <!-- 底部列表组 -->
     <div class="tab-content " id="myTabContent">
       <!-- 班次设置 -->
       <div class="tab-pane fade show active" id="Ban-inner" role="tabpanel" aria-labelledby="dmg-tab">

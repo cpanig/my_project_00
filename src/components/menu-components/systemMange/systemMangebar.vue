@@ -18,7 +18,14 @@
 </script>
 
 <style>
-  .main-left{
-    width: 270px;
-  }
+/* #asidenav .router-link-active:after,
+.list-group-item:hover:after{
+  height: 10px;
+  width: 10px;
+  content: '';
+  border: 15px solid ;
+  border-color: transparent transparent transparent #007BFF;
+  position: absolute;
+  left: 290px;
+} */
 </style>

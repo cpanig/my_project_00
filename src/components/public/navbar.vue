@@ -10,8 +10,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
       <router-link class="navbar-brand" to="/">首页</router-link>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
+        <ul class="navbar-nav" id="headnav">
+          <li class="nav-item">
             <router-link class="nav-link" to="/home/systemMange">系统管理 <span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item">
@@ -70,5 +70,28 @@ export default {
   }
   #nav{
     width: 900px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #headnav  .nav-link{
+    padding: 16px !important;
+    position: relative;
+  }
+  /* 顶部导航特效 */
+  #headnav  .nav-link:hover,
+  #headnav .nav-item > .router-link-active{
+    background-color: #426FAA;
+    color: white !important;
+  }
+  #headnav  .nav-link:hover:after,
+  #headnav .nav-item > .router-link-active:after{
+    height: 10px;
+    width: 10px;
+    content: '';
+    border: 30px solid;
+    border-color: #426FAA transparent transparent transparent;
+    position: absolute;
+    top: 55px;
+    left: 18px;
   }
 </style>

@@ -1,4 +1,5 @@
 <template>
+<!-- 新建员工信息 -->
 <div class="col-md-9 col-sm-8 col-xs-12 p-5" >
   <form action="#">
       <table class="table table-bordered">

@@ -18,6 +18,7 @@ export default {
   body{
     background-color: #162849 !important;
   }
+  /* 定义全局动画 */
   .v-enter{
     opacity: 0;
     transform: translateX(-100%);

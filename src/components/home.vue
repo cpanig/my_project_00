@@ -2,9 +2,9 @@
   <div>
   <!-- 1.顶部导航navbar-->
   <navbar></navbar>
-  <!-- 2.底部所以页面的路由跳转-->
+  <!-- 2.主内容区 -->
   <transition mode="out-in">
-    <router-view></router-view>
+    <router-view id="asidenav"></router-view>
   </transition>
  </div>
 </template>
@@ -40,16 +40,18 @@ export default {
   #nav{
     width: 900px;
   }
-  .v-enter{
-    opacity: 0;
-    transform: translateX(-100%);
+  .list-group-item{
+    position: relative;
   }
-  .v-leave-to{
-    opacity: 0;
-    transform: translateX(100%);
+  /* 侧边菜单栏特效  */
+  #asidenav .router-link-active,
+  .list-group-item:hover{
+    background-color:#007BFF !important;
+    color: white !important;
+    box-shadow: -4px 5px 20px grey;
+    z-index: 99999;
   }
-  .v-enter-active,
-  .v-leave-active{
-    transition: all 0.5s ease;
+  .list-group-item:first-child{
+    box-shadow: 0 !important;
   }
 </style>

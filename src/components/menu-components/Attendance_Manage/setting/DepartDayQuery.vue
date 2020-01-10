@@ -1,8 +1,9 @@
 <template>
+<!-- 部门日考勤查询 -->
 <div class="main-right mt-5">
   <ul class="nav nav-tabs col-sm-12" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="Tracking-tab" data-toggle="tab" href="#Tracking-inner" role="tab" aria-controls="dmg" aria-selected="true">部门日考勤管理</a>
+      <a class="nav-link active" id="Tracking-tab" data-toggle="tab" href="#Tracking-inner" role="tab" aria-controls="dmg" aria-selected="true">部门日考勤查询</a>
     </li>
   </ul>
   <div class="tab-content " id="myTabContent">

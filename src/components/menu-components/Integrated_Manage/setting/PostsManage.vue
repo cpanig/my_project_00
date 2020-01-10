@@ -1,5 +1,7 @@
 <template>
+<!-- 职务管理 -->
 <div class="main-right mt-5">
+  <!-- 顶部菜单 -->
   <ul class="nav nav-tabs col-sm-12" id="myTab" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="manage-tab" data-toggle="tab" href="#manage-inner" role="tab" aria-controls="dmg" aria-selected="true">职务管理</a>
@@ -14,6 +16,7 @@
       <a class="nav-link " id="remove-tab" data-toggle="tab" href="#remove-inner" role="tab" aria-controls="dmg" aria-selected="true">删除</a>
     </li>
   </ul>
+    <!-- 底部列表组 -->
     <div class="tab-content " id="myTabContent">
       <!-- 职务管理 -->
       <div class="tab-pane fade show active" id="manage-inner" role="tabpanel" aria-labelledby="dmg-tab">

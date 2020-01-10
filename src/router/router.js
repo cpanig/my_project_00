@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 /* 主菜单界面 */
 import home from '../components/home.vue'
-import menus from '../menu.vue'
+import menus from '../components/menu.vue'
 /* 系统管理 */
 import systemMange from '../components/menu-components/systemMange/systemMange.vue'
 import sysSeting from '../components/menu-components/systemMange/setting/systemSetting.vue'
@@ -46,9 +46,32 @@ import PersonalPosition from '../components/menu-components/Staff_Tracking/setti
 /* 查询统计 */
 import QueryStatistic from '../components/menu-components/Query_Statistic/Query_Statistic.vue'
 import MineStaffQuery from '../components/menu-components/Query_Statistic/setting/MineStaffQuery.vue'
+import MineStaffDistrit from '../components/menu-components/Query_Statistic/setting/MineStaffDistrit.vue'
+import MinePeopleStatistic from '../components/menu-components/Query_Statistic/setting/MinePeopleStatistic.vue'
+import RegionPeopleStatistic from '../components/menu-components/Query_Statistic/setting/RegionPeopleStatistic.vue'
+import UnreachableAreaQuery from '../components/menu-components/Query_Statistic/setting/UnreachableAreaQuery.vue'
+import OvertimeQuery from '../components/menu-components/Query_Statistic/setting/OvertimeQuery.vue'
+import MineUpAndDownQuery from '../components/menu-components/Query_Statistic/setting/MineUpAndDownQuery.vue'
+import StationThroughQuery from '../components/menu-components/Query_Statistic/setting/StationThroughQuery.vue'
+import StationInfoQuery from '../components/menu-components/Query_Statistic/setting/StationInfoQuery.vue'
+import StationAbnormalQuery from '../components/menu-components/Query_Statistic/setting/StationAbnormalQuery.vue'
+import InterfaceExceptionQuery from '../components/menu-components/Query_Statistic/setting/InterfaceExceptionQuery.vue'
+import MineCadreQuery from '../components/menu-components/Query_Statistic/setting/MineCadreQuery.vue'
+import RestrictedAreaPersonQuery from '../components/menu-components/Query_Statistic/setting/RestrictedAreaPersonQuery.vue'
 /* 考勤管理 */
 import AttendanceManage from '../components/menu-components/Attendance_Manage/Attendance_Manage.vue'
 import DepartDayQuery from '../components/menu-components/Attendance_Manage/setting/DepartDayQuery.vue'
+import PersonMonthQuery from '../components/menu-components/Attendance_Manage/setting/PersonMonthQuery.vue'
+import CadreDayQuery from '../components/menu-components/Attendance_Manage/setting/CadreDayQuery.vue'
+import CadreMonthStatistic from '../components/menu-components/Attendance_Manage/setting/CadreMonthStatistic.vue'
+import DepMonthAttendASta from '../components/menu-components/Attendance_Manage/setting/DepMonthAttendASta.vue'
+import MineDayAttendSta from '../components/menu-components/Attendance_Manage/setting/MineDayAttendSta.vue'
+import DepHourStatistic from '../components/menu-components/Attendance_Manage/setting/DepHourStatistic.vue'
+import MineMonthAttendSta from '../components/menu-components/Attendance_Manage/setting/MineMonthAttendSta.vue'
+import LateEarlyQuery from '../components/menu-components/Attendance_Manage/setting/LateEarlyQuery.vue'
+import InterruptAttendReduce from '../components/menu-components/Attendance_Manage/setting/InterruptAttendReduce.vue'
+import AttendManualCorrection from '../components/menu-components/Attendance_Manage/setting/AttendManualCorrection.vue'
+import AttendTransfer from '../components/menu-components/Attendance_Manage/setting/AttendTransfer.vue'
 /* 系统帮助 */
 import SystemHelp from '../components/menu-components/System_Help/System_Help.vue'
 import Helps from '../components/menu-components/System_Help/setting/Helps.vue'
@@ -58,9 +81,10 @@ import ContactUs from '../components/menu-components/System_Help/setting/Contact
 Vue.use(VueRouter)
 const router = new VueRouter({
   routes: [
-    { path: '/', redirect: '/menus' },
+    /* 主菜单界面  */
+    { path: '/', redirect: '/menus', name: '隧道工程人员管理系统' },
     { path: '/menus', component: menus },
-    /* 主菜单界面 */
+    /* 主要工作页面 */
     { path: '/home', redirect: '/home/systemMange' },
     { path: '/home',
       component: home,
@@ -135,7 +159,20 @@ const router = new VueRouter({
          component: QueryStatistic,
          children:
          [ { path: '/home/Query_Statistic', redirect: '/home/Query_Statistic/MineStaffQuery' },
-           { path: '/home/Query_Statistic/MineStaffQuery', component: MineStaffQuery }
+           { path: '/home/Query_Statistic/MineStaffQuery', component: MineStaffQuery },
+           { path: '/home/Query_Statistic/MineStaffDistrit', component: MineStaffDistrit },
+           { path: '/home/Query_Statistic/MinePeopleStatistic', component: MinePeopleStatistic },
+           { path: '/home/Query_Statistic/RegionPeopleStatistic', component: RegionPeopleStatistic },
+           { path: '/home/Query_Statistic/RegionPeopleStatistic', component: RegionPeopleStatistic },
+           { path: '/home/Query_Statistic/UnreachableAreaQuery', component: UnreachableAreaQuery },
+           { path: '/home/Query_Statistic/OvertimeQuery', component: OvertimeQuery },
+           { path: '/home/Query_Statistic/MineUpAndDownQuery', component: MineUpAndDownQuery },
+           { path: '/home/Query_Statistic/StationThroughQuery', component: StationThroughQuery },
+           { path: '/home/Query_Statistic/StationInfoQuery', component: StationInfoQuery },
+           { path: '/home/Query_Statistic/StationAbnormalQuery', component: StationAbnormalQuery },
+           { path: '/home/Query_Statistic/InterfaceExceptionQuery', component: InterfaceExceptionQuery },
+           { path: '/home/Query_Statistic/MineCadreQuery', component: MineCadreQuery },
+           { path: '/home/Query_Statistic/RestrictedAreaPersonQuery', component: RestrictedAreaPersonQuery }
          ]
        },
        /* 考勤管理 */
@@ -143,7 +180,18 @@ const router = new VueRouter({
          component: AttendanceManage,
          children:
          [ { path: '/home/Attendance_Manage', redirect: '/home/Attendance_Manage/DepartDayQuery' },
-           { path: '/home/Attendance_Manage/DepartDayQuery', component: DepartDayQuery }
+           { path: '/home/Attendance_Manage/DepartDayQuery', component: DepartDayQuery },
+           { path: '/home/Attendance_Manage/PersonMonthQuery', component: PersonMonthQuery },
+           { path: '/home/Attendance_Manage/CadreDayQuery', component: CadreDayQuery },
+           { path: '/home/Attendance_Manage/CadreMonthStatistic', component: CadreMonthStatistic },
+           { path: '/home/Attendance_Manage/DepMonthAttendASta', component: DepMonthAttendASta },
+           { path: '/home/Attendance_Manage/MineDayAttendSta', component: MineDayAttendSta },
+           { path: '/home/Attendance_Manage/DepHourStatistic', component: DepHourStatistic },
+           { path: '/home/Attendance_Manage/MineMonthAttendSta', component: MineMonthAttendSta },
+           { path: '/home/Attendance_Manage/LateEarlyQuery', component: LateEarlyQuery },
+           { path: '/home/Attendance_Manage/InterruptAttendReduce', component: InterruptAttendReduce },
+           { path: '/home/Attendance_Manage/AttendManualCorrection', component: AttendManualCorrection },
+           { path: '/home/Attendance_Manage/AttendTransfer', component: AttendTransfer }
          ]
        },
        /* 系统帮助 */
